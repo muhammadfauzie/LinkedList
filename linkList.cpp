@@ -181,4 +181,15 @@ public:
                         cout << "\n";
                     }
                 }
-               
+                break;
+                case '5':
+                {
+                }
+                break;
+                default:
+                {
+                    cout << "pilihan salah !." << endl;
+                }
+                break;
+              
+            }
