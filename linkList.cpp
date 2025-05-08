@@ -136,9 +136,49 @@ public:
                 }
 
                 case '2': 
-              
-            }
-        }
+                {
+                    if (mhs.listEmpty())
+                    {
+                        cout << endl;
+                        cout << "List Kosong" << endl;
+                        break;
+                    }
+                    cout << endl;
+                    cout << "\nMasukkan no mahasiswa yang akan dihapus : ";
+                    cin >> nim;
+                    if (mhs.delNode(nim) == false)
+                        cout << endl;
+                        cout << "Data tidak ditemukan" << endl;
+                        cout << endl;
+                        cout << "Data dengan nomor mahasiswa" << nim << "berhasil dihapus" << endl;
+                    
+                }
+                break;
+                case '3':
+                {
+                    mhs.traverse();
+                }
+                break;
 
-    }
-};
+                case '4':
+                {
+                    if (mhs.listEmpty() == true)
+                    {
+                        cout << "\nList Kosong\n";
+                        break;
+                    }
+                    Node *previous, *current;
+                    cout << endl;
+                    cout << "Masukkan no mahasiswa yang dicari : ";
+                    cin >> nim;
+                    if (mhs.Search(nim, &previous, &current) == false)
+                        cout << endl;
+                        cout << "Data tidak ditemukan" << endl;
+                    {
+                        cout << endl;
+                        cout << "Data ditemukan" << endl;
+                        cout << "\nNo Mahasiswa: " << current->noMhs << endl;
+                        cout << "\n";
+                    }
+                }
+               
